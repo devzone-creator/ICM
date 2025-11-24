@@ -2,13 +2,13 @@ package models;
 
 public abstract class Person {
     private int id;
-    private String Name;
+    private String name;
     private String email;
     private int phone;
 
-    public Person(int id, String Name, String email, int phone) {
+    public Person(int id, String name, String email, int phone) {
         this.id = id;
-        this.Name = Name;
+        this.name = name;
         this.email = email;
         this.phone = phone;
     }
@@ -30,11 +30,11 @@ public abstract class Person {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public int getPhone() {
