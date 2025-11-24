@@ -1,6 +1,6 @@
 package models;
 
-public class Customer extends Person{
+public class Customer extends Person {
     private int loyaltyPoints;
     private String address;
 

@@ -1,6 +1,6 @@
 package models;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private String employeeId;
     private String role;
     private double salary;
@@ -36,6 +36,7 @@ public class Employee extends Person{
         }
     }
 
+    @Override
     public String toString(){
         return String.format("Employee: %s (ID: %s) - Role: %s, Salary: $%.2f",
                 getName(), employeeId, role, salary);
