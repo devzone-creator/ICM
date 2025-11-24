@@ -16,4 +16,18 @@ public class OrderItem {
     public Product getProduct(){return product;}
     public int getQuantity(){return quantity;}
     public double getPriceAtOrder() {return priceAtOrder;}
+
+    public void setQuantity(int quantity){
+        this.quantity = quantity;
+    }
+
+    public double getSubTotal(){
+        return priceAtOrder * quantity;
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s * %d @ $%.2f = $%.2f",
+                product.getName(), quantity, priceAtOrder, getSubTotal());
+    }
 }
