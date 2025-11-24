@@ -1,6 +1,6 @@
 package models;
 
-public class Product {
+public abstract class Product {
     private String id;
     private String name;
     private String description;
@@ -73,8 +73,9 @@ public class Product {
         return false;
     }
 
-    public String getProductType();
+    public abstract String getProductType();
 
+    @Override
     public String toString(){
         return String.format("%s [ID: %s] - $%.2f(stock: %d)",
                 name, id, price, stock);

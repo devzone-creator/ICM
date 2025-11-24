@@ -13,5 +13,19 @@ public class PhysicalProduct extends Product{
     public double getWeight(){return weight;}
     public String getDimensions(){return dimensions;}
 
+    public void setWeight(double weight){
+        this.weight = weight;
+    }
 
+    public void setDimensions(String dimensions){this.dimensions = dimensions;}
+
+    @Override
+    public String getProductType(){
+        return "Physical";
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + String.format(" | Weight: %.2f Kg, Size: %s", weight, dimensions);
+    }
 }
