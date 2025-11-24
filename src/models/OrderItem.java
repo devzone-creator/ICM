@@ -7,10 +7,10 @@ public class OrderItem {
     private int quantity;
     private double priceAtOrder;
 
-    public OrderItem(Product product, int quantity, double priceAtOrder){
+    public OrderItem(Product product, int quantity){
         this.product = product;
         this.quantity = quantity;
-        this.priceAtOrder = priceAtOrder;
+        this.priceAtOrder = product.getPrice();
     }
 
     public Product getProduct(){return product;}
